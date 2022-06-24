@@ -331,7 +331,7 @@ class AssetsController extends Controller
         }
 
 
-        $total = $assets->count();
+        $total = $assets->take($limit)->count();
         $assets = $assets->skip($offset)->take($limit)->get();
         
 
